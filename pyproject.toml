@@ -1,0 +1,26 @@
+[project]
+name = "nanochat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.12.13",
+    "easy-asr-server",
+    "easy-tts-server",
+    "lite-camera>=2.0.4",
+    "matplotlib>=3.10.3",
+    "openai>=1.86.0",
+    "pillow>=11.2.1",
+    "pyaec>=1.0.1",
+    "requests>=2.32.4",
+    "rich>=14.0.0",
+    "sounddevice>=0.5.2",
+    "soundfile>=0.13.1",
+    "ten-vad",
+]
+
+[tool.uv.sources]
+easy-tts-server = { git = "https://github.com/3rd-Musketeer/easy-tts-server.git" }
+easy-asr-server = { git = "https://github.com/3rd-Musketeer/easy-asr-server.git" }
+ten-vad = { git = "https://github.com/3rd-Musketeer/ten-vad.git", rev = "40b6ca465d3d12c544b5ae04073d58aee57282e0" }
