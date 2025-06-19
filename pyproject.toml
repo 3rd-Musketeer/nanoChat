@@ -8,16 +8,21 @@ dependencies = [
     "aiohttp>=3.12.13",
     "easy-asr-server",
     "easy-tts-server",
+    "ffmpeg-python>=0.2.0",
+    "gradio>=5.34.1",
     "lite-camera>=2.0.4",
+    "loguru>=0.7.3",
     "matplotlib>=3.10.3",
     "openai>=1.86.0",
     "pillow>=11.2.1",
     "pyaec>=1.0.1",
+    "python-dotenv>=1.0.0",
     "requests>=2.32.4",
     "rich>=14.0.0",
     "sounddevice>=0.5.2",
     "soundfile>=0.13.1",
     "ten-vad",
+    "websockets==12.0",
 ]
 
 [tool.uv.sources]
