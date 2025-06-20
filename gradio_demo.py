@@ -304,4 +304,4 @@ with gr.Blocks(title="视频对话") as demo:
         queue=False
     )
 
-demo.launch(server_name="0.0.0.0", server_port=8999, strict_cors=False)
+demo.launch()
