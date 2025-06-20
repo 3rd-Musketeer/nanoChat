@@ -1,78 +1,86 @@
-# Usage
+# nanoChat
 
-## 1. Installation
+Real-time conversational AI with vision capabilities.
 
-### 1.1 `uv`
+## Installation
 
-1. Install `uv` from https://docs.astral.sh/uv/
+Choose your preferred environment management tool to set up the project.
 
-2. Use uv to setup venv and install dependencies
+### 1. `uv` (Recommended)
 
-```sh
-uv sync
-```
+1.  Install `uv` from [docs.astral.sh/uv](https://docs.astral.sh/uv).
+2.  Create the virtual environment and install dependencies with a single command:
+    ```sh
+    uv sync
+    ```
 
-### 1.2 `conda`
+### 2. `conda`
 
-1. Install `conda` from https://anaconda.org/anaconda/conda
+1.  Install `conda` from the [official website](https://anaconda.org/anaconda/conda).
+2.  Create and activate a new conda environment:
+    ```sh
+    conda create -n nanochat python=3.10
+    conda activate nanochat
+    ```
+3.  Install the required packages using pip:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-2. Create conda environment
+### 3. `pip`
 
-```sh
-conda create -n <my_env> python=3.10
-pip install .
-```
+1.  Create and activate a Python virtual environment:
+    ```sh
+    python -m venv .venv
+    source .venv/bin/activate
+    ```
+2.  Install the required packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-### 1.3 `venv`
+## Configuration
 
-```sh
-python -m venv .
-source .venv/bin/activate
-pip install .
-```
+1.  Create a `.env` file from the example template. If `.env.example` doesn't exist, you can create it manually with the content below.
+    ```sh
+    cp .env.example .env
+    ```
+2.  Open the `.env` file and add your secret keys and configuration details.
+    ```env
+    # .env
+    LLM_API_KEY=
+    LLM_BASE_URL=
+    LLM_MODEL_ID=
 
-## 2. Configuration
+    DOUBAO_API_KEY=
+    DOUBAO_BASE_URL=
+    DOUBAO_MODEL_ID=
+    ```
 
-Create `.env` from `.env.example`, fill in the secret keys.
+## Usage
 
-```
-# .env
+### Real-time Demo
 
-LLM_API_KEY=
-LLM_BASE_URL=
-LLM_MODEL_ID=
+Activate your environment and run the main script.
 
-DOUBAO_API_KEY=xasdasxxx
-DOUBAO_BASE_URL=asdasxxxx
-DOUBAO_MODEL_ID=doubao-1.5-vision-lite-250315
-```
+*   Using `uv`:
+    ```sh
+    uv run python main.py
+    ```
+*   Using `conda` or `pip`:
+    ```sh
+    # Make sure your environment (e.g., 'nanochat' or '.venv') is active
+    python main.py
+    ```
 
-## 3. Usage
+### Gradio Demo
 
-### 3.1 Run Realtime Demo
-
-```sh
-uv run python main.py
-
-# or using conda
-conda activate your_env
-python main.py
-
-# or using venv
-source .venv/bin/activate
-python main.py
-```
-
-### 3.2 Run Gradio demo
-
-```sh
-uv run python gradio_demo.py
-
-# or using conda
-conda activate <your_env>
-python gradio_demo.py
-
-# or using venv
-source .venv/bin/activate
-python gradio_demo.py
-```
+*   Using `uv`:
+    ```sh
+    uv run python gradio_demo.py
+    ```
+*   Using `conda` or `pip`:
+    ```sh
+    # Make sure your environment is active
+    python gradio_demo.py
+    ```
